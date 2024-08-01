@@ -75,5 +75,5 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Run tests on Vision OS simulator
-      run: set -o pipefail && make test_vision
+      run: set -o pipefail && xcodebuild -list && make test_vision
       ##run: set -o pipefail && xcodebuild -scheme FioriThemeManager -destination 'generic/platform=visionOS Simulator,name=Apple Vision Pro' clean build | xcpretty  
